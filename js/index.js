@@ -126,6 +126,7 @@ document.querySelector('#placeOrder').addEventListener('click',()=>{
     let contactNumber = document.querySelector('#contactNumber');
     let emailAddress = document.querySelector('#emailAddress');
     let quantity = document.querySelector('#quantity');
+    let totalPrice = document.querySelector('#totalPrice');
 
 
 
@@ -144,13 +145,15 @@ document.querySelector('#placeOrder').addEventListener('click',()=>{
                 contactNum: contactNumber.value,
                 emailAddress: emailAddress.value,
                 quantity: `${quantity.value}${getPlusQty}`,
-                discount: `${document.querySelector('#discount').innerText}%`
+                discount: `${document.querySelector('#discount').innerText}%`,
+                total: `₱${totalPrice.innerText}`
         
             }
                 // send email
             emailjs.send("service_l6rd7e7","template_6tm668u",params);
     swal("Place Order Success!", "", "success");
         
+            alert(totalPrice.innerText)
 
     }else{
 
