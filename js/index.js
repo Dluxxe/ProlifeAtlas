@@ -153,6 +153,7 @@ document.querySelector('#placeOrder').addEventListener('click',()=>{
             emailjs.send("service_l6rd7e7","template_6tm668u",params);
     swal("Place Order Success!", "", "success");
         
+            setTimeout(()=>{location.reload();},1500);
 
     }else{
 
@@ -170,6 +171,8 @@ document.querySelector('#placeOrder').addEventListener('click',()=>{
             // send email
         emailjs.send("service_l6rd7e7","template_6tm668u",params);
     swal("Place Order Success!", "", "success");
+
+    setTimeout(()=>{location.reload();},1500);
 
     }
 
